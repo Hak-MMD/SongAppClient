@@ -1,38 +1,311 @@
-.App {
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.forma1 {
   text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+  width: 40%;
+  margin: 0 auto;
+  margin-top: 100px;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+}
+
+.inp {
+  padding: 7px;
+  font-size: 15px;
+  margin: 7px;
+  border-radius: 10px;
+  border-color: blueviolet;
+  /* color: blueviolet; */
+  cursor: pointer;
+}
+
+.clear-error {
+  display: none;
+}
+
+.error-hand {
   color: white;
+  background: rgb(243, 103, 103);
+  padding: 10px;
+  border-radius: 10px;
+  margin-left: 9px;
+  margin-right: 9px;
 }
 
-.App-link {
-  color: #61dafb;
+.result-hand {
+  color: white;
+  background: teal;
+  padding: 10px;
+  border-radius: 10px;
+  margin-left: 9px;
+  margin-right: 9px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.navbar {
+  display: flex;
+  background: rgba(0, 81, 255, 0.076);
+  justify-content: space-between;
+  border-top: 1px solid blueviolet;
+  border-bottom: 1px solid blueviolet;
+  width: 100%;
+}
+
+.part1>h1,
+h5 {
+  /* width: 75%; */
+  padding: 10px;
+  color: rgb(158, 110, 255);
+  /* padding-top: 20px; */
+  padding-left: 50px;
+}
+
+.part2>ul {
+  list-style-type: none;
+  display: flex;
+  padding-top: 20px;
+  padding-right: 50px;
+}
+
+.part2>ul>li {
+  padding: 19px;
+}
+
+a {
+  text-decoration: none;
+  color: blueviolet;
+}
+
+
+.set {
+  padding: 10px;
+}
+
+.user {
+  width: 30%;
+  margin: 0 auto;
+  margin-top: 10px;
+  border: 1px solid blueviolet;
+  border-radius: 10px;
+  padding: 10px;
+}
+
+.chat {
+  width: 90%;
+  display: flex;
+  margin: 0 auto;
+  margin-top: 10px;
+  border: 1px solid blueviolet;
+  border-radius: 10px;
+  padding: 10px;
+}
+
+.chat-app {
+  display: flex;
+}
+
+.sidebar {
+  width: 20%;
+}
+
+.line1 {
+  margin: 10px;
+}
+
+.dots {
+  border-color: transparent;
+  background: transparent;
+}
+
+.message {
+  /* position: relative; */
+  border-radius: 10px;
+  padding: 5px;
+  margin: 10px;
+  max-width: 30%;
+}
+
+#me {
+  background: blueviolet;
+  margin-left: 950px;
+  color: white;
+  text-align: right;
+}
+
+#other {
+  background: rgb(196, 196, 196);
+  text-align: left;
+}
+
+.textInp {
+  width: 93%;
+}
+
+.top-block {
+  padding: 20px;
+  background: rgba(0, 106, 39, 0.302);
+}
+
+.top-block>input {
+  width: 30%;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.info {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+}
+
+.info>h3 {
+  margin-left: 20px;
+}
+
+.info>button {
+  margin-right: 20px;
+}
+
+.bottom-block {
+  display: grid;
+  /* justify-content: center; */
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+}
+
+.card {
+  text-align: center;
+  border: 1px solid blueviolet;
+  margin: 10px;
+  border-radius: 10px;
+}
+
+.card-info {
+  display: flex;
+  justify-content: space-between;
+  padding: 30px;
+}
+
+.card>h3 {
+  text-decoration-line: underline;
+}
+
+.card>h3:hover {
+  color: rgb(158, 110, 255);
+  cursor: pointer;
+}
+
+.card-info>button {
+  cursor: pointer;
+}
+
+.create-block {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.create-block>input,
+button {
+  width: 30%;
+  margin: 0 auto;
+}
+
+.error-hand {
+  color: white;
+  background: rgb(243, 103, 103);
+  padding: 10px;
+  border-radius: 4px;
+}
+
+.result-hand {
+  color: white;
+  background: teal;
+  padding: 10px;
+  border-radius: 4px;
+}
+
+.clear-error {
+  display: none;
+}
+
+.spec {
+  display: flex;
+}
+
+.spec-info {
+  width: 30%;
+  text-align: left;
+  padding: 10px;
+  border: solid 2px blueviolet;
+  border-radius: 10px;
+}
+
+.spec-info>p {
+  position: inherit;
+}
+
+.spec-main {
+  width: 70%;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+th,
+td {
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+.top-block {
+  display: flex;
+  justify-content: space-between;
+}
+
+.imag>img {
+  height: 130px;
+  border-radius: 10px;
+  width: 100%;
+}
+
+#card1>img {
+  /* height: 130px; */
+  border-radius: 10px;
+  width: 100%;
+}
+
+#card1>h3 {
+  margin-top: 20px;
+}
+
+.spec-info>img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+/* 
+.navbar {
+  margin-bottom: 1200px;
+}
+
+.top-block {
+  margin-top: 100px;
+} */
+
+.card-info>button {
+  width: 100%
+}
+
+hr {
+  height: 100%;
 }
