@@ -39,7 +39,7 @@ function Register() {
             document.location.reload();
 
         }
-    }, []);
+    }, [navigate]);
 
     return (
         <div>

@@ -38,7 +38,7 @@ function Login() {
             document.location.reload();
 
         }
-    }, []);
+    }, [navigate]);
     return (
         <div>
             <Navbar />

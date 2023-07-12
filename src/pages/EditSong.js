@@ -43,7 +43,7 @@ function EditSong() {
 
     useEffect(() => {
         specSong(params.songId);
-    }, []);
+    }, [params.songId]);
     return (
         <div>
             <Navbar />

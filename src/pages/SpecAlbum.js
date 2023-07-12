@@ -52,11 +52,11 @@ function SpecAlbum() {
 
     useEffect(() => {
         allSongs(params.albumId);
-    }, []);
+    }, [params.albumId]);
 
     useEffect(() => {
         specAlbum(params.albumId);
-    }, []);
+    }, [params.albumId]);
 
 
     return (
