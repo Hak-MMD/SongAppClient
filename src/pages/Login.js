@@ -2,7 +2,6 @@ import React, { useState, useEffect } from 'react';
 import Navbar from '../components/Navbar';
 import { Link, useNavigate } from 'react-router-dom';
 import axios from 'axios';
-import { urlAuth } from '../axios/custom';
 
 function Login() {
     const navigate = useNavigate();
@@ -13,7 +12,7 @@ function Login() {
 
     const loginUser = async () => {
         try {
-            await axios.post(urlAuth + '/login', { email, password }).then((response) => {
+            await axios.post('/auth/login', { email, password }).then((response) => {
                 localStorage.setItem('id', response.data._id);
                 localStorage.setItem('username', response.data.username);
                 localStorage.setItem('email', response.data.email);

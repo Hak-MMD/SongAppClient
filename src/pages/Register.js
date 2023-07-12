@@ -4,7 +4,6 @@ import { useState } from 'react';
 import Navbar from '../components/Navbar';
 import '../App.css';
 import { Link, useNavigate } from 'react-router-dom';
-import { urlAuth } from '../axios/custom';
 
 function Register() {
     const navigate = useNavigate();
@@ -15,7 +14,7 @@ function Register() {
 
     const registerUser = async () => {
         try {
-            await axios.post(urlAuth + '/register', { username, email, password }).then((response) => {
+            await axios.post('/auth/register', { username, email, password }).then((response) => {
                 localStorage.setItem('id', response.data._id);
                 localStorage.setItem('username', response.data.username);
                 localStorage.setItem('email', response.data.email);

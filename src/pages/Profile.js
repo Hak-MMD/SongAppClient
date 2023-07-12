@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { FiLogOut } from 'react-icons/fi';
-import { authFetch, urlAuth } from '../axios/custom';
+import { authFetch } from '../axios/custom';
 import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
 import Protect from '../components/Protect';
@@ -29,7 +29,7 @@ function Profile() {
         const id = localStorage.getItem('id');
         if (localStorage.getItem('token')) {
             localStorage.clear();
-            axios.get(urlAuth + '/myAccount/' + id, {
+            axios.get('/auth/myAccount/' + id, {
                 transformRequest: (data, headers) => {
                     delete headers.common['Authorization'];
                 }

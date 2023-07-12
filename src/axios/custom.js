@@ -9,9 +9,8 @@ const authFetch = axios.create({
 }
 );
 
-const urlAuth = 'https://songapphak.onrender.com/auth';
+
 
 export {
     authFetch,
-    urlAuth
 }
